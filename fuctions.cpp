@@ -13,7 +13,7 @@ void outputPrompt(){
     cout << "2. Enter grade " << endl; 
 }
 
-char calculateGrade(int score){ 
+char calculateGrade(double score){ 
 
     if(score >100) return 'Z'; 
     if (score >= 90 && score <=100 ){
@@ -34,7 +34,7 @@ char calculateGrade(int score){
 }
 
 double calculateGradePoint(char grade){
-    double gradePoint; 
+    int gradePoint; 
 
     switch(grade){
         case 'A':
@@ -56,12 +56,35 @@ double calculateGradePoint(char grade){
     return gradePoint; 
 }
 
+double calculateGPA(double sum, double Credits){
+    double previousCredits; 
+    double previousGpa; 
+
+    cout << "Enter prevoius credits: " ; 
+    cin >> previousCredits; 
+
+    cout << "Enter previous gpa: "; 
+    cin >> previousGpa; 
+
+    double PreviousGradePoint = previousGpa * previousCredits; 
+
+    return (PreviousGradePoint + sum)/(previousCredits + Credits); 
+    
+}
+
 void Subjects::setGrade(char g){
             grade = g; 
         }
 
 void Subjects::setScore(double s){
             score = s; 
+        }
+void Subjects::setGradePoint(int g){
+            gradePoint = g; 
+        }
+
+void Subjects::setCredits(double c){
+            credits = c; 
         }
 
 char Subjects::getGrade(){
@@ -70,4 +93,12 @@ char Subjects::getGrade(){
 
 double Subjects::getScore(){
             return score; 
+        }
+
+double Subjects::getGradePoint(){
+            return gradePoint; 
+        }
+
+double Subjects::getCredits(){
+            return credits; 
         }
