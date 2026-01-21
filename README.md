@@ -3,9 +3,9 @@
 # Overview:
 This is a console-based gpa calculator that I built using C++. It allows you to:
 
-Enter the number of subjectes you took
-Enter the percentage points/ grades for each subjects
-Enter the your cgpa and total credits taken
+1. Enter the number of subjectes you took
+2. Enter the percentage points/ grades for each subjects
+3. Enter the your cgpa and total credits taken
 
 The program then calculates your gpa. 
 
